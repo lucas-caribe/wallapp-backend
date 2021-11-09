@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from os import environ
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,10 +50,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 ]
-
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -137,3 +135,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+EMAIL_BACKEND = 'sgbackend.SendGridBackend'
+SENDGRID_API_KEY = config('SENDGRID_API_KEY')
+SITE_ID = 1
