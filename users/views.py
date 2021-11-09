@@ -4,10 +4,10 @@ from rest_framework import status
 from rest_framework.response import Response
 from dj_rest_auth.registration.views import RegisterView
 
-def send_greetings_email(first_name, last_name, email):
+def send_greetings_email(username, email):
   try:
     subject = 'Welcome to WallApp!'
-    message = f'Hi, {first_name} {last_name}!\n\nYour account was successfully created! Thank you for registering at WallApp!'
+    message = f'Hi, {username}!\n\nYour account was successfully created! Thank you for registering at WallApp!'
     from_email = config('FROM_EMAIL')
 
     send_mail(subject, message, from_email, [email])
@@ -21,7 +21,7 @@ class CustomRegisterView(RegisterView):
     user = self.perform_create(serializer)
     headers = self.get_success_headers(serializer.data)
 
-    send_greetings_email(user.first_name, user.last_name, user.email)
+    send_greetings_email(user.username, user.email)
 
     return Response(
       self.get_response_data(user),
