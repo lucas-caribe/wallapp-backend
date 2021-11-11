@@ -8,7 +8,7 @@ class PostPermissions(permissions.BasePermission):
     if view.action == 'list' or view.action == 'retrieve':
       return True
     elif view.action == 'create':
-      return request.user.is_authenticated and request.data['owner'] == request.user.id
+      return request.user.is_authenticated
     else:
       return False
 
