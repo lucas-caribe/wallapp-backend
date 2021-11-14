@@ -3,5 +3,5 @@ from .views import CustomRegisterView
 
 urlpatterns = [
   path('users/', include('dj_rest_auth.urls')),
-  path('users/registration/', CustomRegisterView.as_view(), name='users-registration'),
+  path('users/registration/', CustomRegisterView.as_view(), name='user-registration'),
 ]

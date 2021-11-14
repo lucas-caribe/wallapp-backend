@@ -5,12 +5,12 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 
 class UserTests(APITestCase):
+  registration_url = reverse('user-registration')
+  login_url = reverse('rest_login')
+  
   USERNAME = 'lucas'
   EMAIL = 'lucas@email.com'
   PASSWORD = 'password123..'
-
-  registration_url = reverse('users-registration')
-  login_url = reverse('rest_login')
 
   registration_data = {
     'username': USERNAME,
