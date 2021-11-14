@@ -5,9 +5,9 @@ class PostPermissions(permissions.BasePermission):
     if request.user.is_superuser:
       return True
 
-    if view.action == 'list' or view.action == 'retrieve':
+    if view.action in ['list', 'retrieve']:
       return True
-    elif view.action == 'create':
+    elif view.action in ['create', 'update', 'partial_update', 'destroy']:
       return request.user.is_authenticated
     else:
       return False
