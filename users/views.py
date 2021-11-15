@@ -8,8 +8,8 @@ from dj_rest_auth.registration.views import RegisterView
 def send_greetings_email(username, email):
     try:
         subject = 'Welcome to WallApp!'
-        message = f'Hi, {username}!\n\nYour account was successfully created! '
-        + 'Thank you for registering at WallApp!'
+        message = (f'Hi, {username}!\n\nYour account was successfully created! '
+            'Thank you for registering at WallApp!')
         from_email = config('FROM_EMAIL')
 
         send_mail(subject, message, from_email, [email])

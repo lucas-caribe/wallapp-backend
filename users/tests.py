@@ -26,8 +26,8 @@ class UserTests(APITestCase):
     }
 
     email_subject = 'Welcome to WallApp!'
-    email_body = f'Hi, {USERNAME}!\n\nYour account was successfully created! '
-    + 'Thank you for registering at WallApp!'
+    email_body = (f'Hi, {USERNAME}!\n\nYour account was successfully created! '
+        'Thank you for registering at WallApp!')
 
     # user should be able to register
     def test_registration(self):
