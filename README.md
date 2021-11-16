@@ -20,15 +20,22 @@ Start by cloning this repository
 git clone git@github.com:lucas-caribe/wallapp-backend.git
 cd wallapp-backend
 ```
-After cloning the repository, make sure python 3.8 is installed on your computer.
+After cloning the repository, make sure python 3.8 and pip are installed on your computer.
 
 ```bash
 python3 --version
+pip3 --version
+```
+
+If necessary, install pip
+
+```bash
+sudo apt install python3-pip
 ```
 
 Install the packaging tool `pipenv`
 ```bash
-pip3 install pipenv
+sudo pip3 install pipenv
 ```
 Install the project dependencies and start the shell
 ```bash
