@@ -63,6 +63,7 @@ coverage report
 
 First you need to get the server running
 ```bash
+python3 manage.py migrate
 python3 manage.py runserver
 ```
 Then you can try all the functionalities of this API by using an 'API Client' such as `Insomnia` or `Postman`.
