@@ -23,12 +23,12 @@ cd wallapp-backend
 After cloning the repository, make sure python 3.8 is installed on your computer.
 
 ```bash
-python -v
+python3 --version
 ```
 
 Install the packaging tool `pipenv`
 ```bash
-pip install pipenv
+pip3 install pipenv
 ```
 Install the project dependencies and start the shell
 ```bash
@@ -45,7 +45,7 @@ FROM_EMAIL = <your_sender_email>
 
 You can run the tests created for this application by running the command
 ```bash
-python manage.py test
+python3 manage.py test
 ```
 And you can check the test coverage by running
 ```bash
@@ -56,7 +56,7 @@ coverage report
 
 First you need to get the server running
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 Then you can try all the functionalities of this API by using an 'API Client' such as `Insomnia` or `Postman`.
 
