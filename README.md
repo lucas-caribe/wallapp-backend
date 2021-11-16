@@ -61,7 +61,7 @@ coverage report
 ```
 ## Usage
 
-First you need to get the server running
+First you need to make the migrations and get the server running
 ```bash
 python3 manage.py migrate
 python3 manage.py runserver
