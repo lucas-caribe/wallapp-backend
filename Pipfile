@@ -29,6 +29,7 @@ sqlparse = "==0.4.2"
 urllib3 = "==1.26.7"
 Django = "==3.2.9"
 PyJWT = "==2.3.0"
+coverage = "*"
 
 [dev-packages]
 
