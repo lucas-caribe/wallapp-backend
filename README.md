@@ -61,11 +61,14 @@ coverage report
 ```
 ## Usage
 
-First you need to make the migrations and get the server running
+Run the migrations
 ```bash
 python3 manage.py migrate
+```
+Get the server running
+```bash
 python3 manage.py runserver
 ```
-Then you can try all the functionalities of this API by using an 'API Client' such as `Insomnia` or `Postman`.
+After starting the server, you can try all the functionalities of this API by using an 'API Client' such as `Insomnia` or `Postman`.
 
 This API is designed to be used by this front-end application [here](https://github.com/lucas-caribe/wallapp-frontend). So you can also consider installing and running it if you want to see how everything works together.
